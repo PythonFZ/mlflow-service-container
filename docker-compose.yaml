@@ -1,0 +1,12 @@
+services:
+  myservice:
+    build:
+      context: .
+    ports:
+      - "5001:5000"
+    healthcheck:
+      # test: ["CMD", "curl", "-f", "http://localhost:5000/health"]
+      test: curl --fail http://localhost:5000/health || exit 1
+      interval: 10s
+      timeout: 5s
+      retries: 5
