@@ -1,4 +1,4 @@
-FROM ghcr.io/mlflow/mlflow:v2.16.0
+FROM ghcr.io/mlflow/mlflow:v2.18.0
 # install curl
 RUN apt-get update && apt-get install -y curl
 
